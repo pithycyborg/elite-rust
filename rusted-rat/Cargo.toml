@@ -1,0 +1,21 @@
+[package]
+name = "rusted-rat"
+version = "3.5.0"          # Match your README version
+authors = ["Pithy Cyborg"]
+edition = "2021"
+description = "High-performance single-file Linux memory scanner and live patcher with wildcard support"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/youruser/rusted-rat"
+readme = "README.md"
+keywords = ["memory-scanner", "ptrace", "reverse-engineering", "linux-hacking", "forensics", "rust"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+libc = "0.2"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
