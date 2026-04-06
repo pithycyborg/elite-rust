@@ -12,17 +12,25 @@ Rusted-RAT is a high-performance, single-file memory scanner and live patcher fo
 
 ### Quick Start
 
-**Run as a Script (requires Cargo Nightly)**
-```bash
+Run as a Script (Requires Rust Nightly)
+Cargo handles the libc dependency and caches the binary automatically. It runs at native speed after the first execution.
+Bash
+
 chmod +x rusted_rat.rs
-sudo ./rusted_rat.rs --pid 1234 --pattern "48??89E5??90"
+sudo cargo +nightly -Zscript rusted_rat.rs --pid 1234 --pattern "48??89E5??90"
 
-Compile to a Tiny Binarybash
+The "Elite" Alias
+Add this to your .zshrc or .bashrc to treat the script like a built-in system utility:
+Bash
 
-rustc -O rusted_rat.rs -o rrat
-sudo ./rrat --pid 1234 --pattern "4889E5" --replace "909090" --verbose
+alias rrat="sudo cargo +nightly -Zscript /path/to/rusted_rat.rs"
 
-TroubleshootingIf attach fails, your kernel is likely restricting ptrace. Fix it with:bash
+# Usage
+rrat --pid 1234 --pattern "4889E5" --replace "909090" --verbose
+
+### Troubleshooting
+
+If attach fails, your kernel is likely restricting ptrace. Fix it with:bash
 
 echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
 
