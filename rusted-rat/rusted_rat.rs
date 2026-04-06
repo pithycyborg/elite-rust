@@ -1,5 +1,10 @@
 #!/usr/bin/env -S cargo +nightly -Zscript
 
+---
+[dependencies]
+libc = "0.2"
+---
+
 /* Rusted-RAT — Single-file Rust memory search & patch tool
  * Zero dependencies. Wildcard search. Multi-pattern + live patching.
  * Built for people who like their tools sharp, fast, and self-contained.
