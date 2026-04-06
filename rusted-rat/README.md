@@ -34,7 +34,9 @@ If attach fails, your kernel is likely restricting ptrace. Fix it with:bash
 
 echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
 
-Warning: Patching live processes can instantly crash the target. Only use on test binaries you control.Design PhilosophyRusted-RAT was born from a frustration with bloated forensic frameworks. Everything wants heavy dependencies or massive environments. This project is a reminder that you don't need a massive ecosystem to build serious tools. Just clarity, discipline, and a bit of Rust. Writing it in one source file is an experiment in purity: Simplicity scales.
+Warning: Patching live processes can instantly crash the target. Only use on test binaries you control.
+
+Design Philosophy: Rusted-RAT was born from a frustration with bloated forensic frameworks. Everything wants heavy dependencies or massive environments. This project is a reminder that you don't need a massive ecosystem to build serious tools. Just clarity, discipline, and a bit of Rust. Writing it in one source file is an experiment in purity: Simplicity scales.
 
 Author: Pithy Cyborg
 
