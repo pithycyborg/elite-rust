@@ -4,7 +4,7 @@
 Rusted-RAT is a high-performance, single-file memory scanner and live patcher for Linux. Designed for security researchers and reverse engineers who value speed over bloat.
 
 ### Why it's Elite
-- Zero-Config: No Cargo.toml required. Run as a script or compile with rustc.
+- Zero-Config: No Cargo.toml required. Run instantly as a script or build an optimized binary.
 - RAII Safety: Custom Rust guards ensure target processes are always resumed, even on panic.
 - Pattern Mastery: Full wildcard support (e.g. 48??89E5??90) for dynamic signatures.
 - Smart Scanning: 4 MiB chunking with overlap logic to never miss patterns split across boundaries.
