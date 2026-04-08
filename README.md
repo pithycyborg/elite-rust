@@ -2,7 +2,7 @@
 
 **Zero-allocation systems experiments. Nightly features. Production patterns.**
 
-Rust code that prioritizes performance, safety, and architectural clarity. Each experiment demonstrates a specific technique, constraint, or systems concept — implemented with minimal dependencies and maximum signal.
+Rust code that prioritizes performance, safety, and architectural clarity. Each experiment demonstrates a specific technique, constraint, or systems concept implemented with minimal dependencies and maximum signal.
 
 ## Featured
 
